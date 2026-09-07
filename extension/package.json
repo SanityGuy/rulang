@@ -1,0 +1,41 @@
+{
+    "name": "rulang-support",
+    "displayName": "Rulang Language Support",
+    "description": "Snippets and file icon support for the Rulang programming language.",
+    "version": "1.0.0",
+    "publisher": "SouyanDev",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Snippets",
+        "Programming Languages"
+    ],
+    "contributes": {
+                "languages": [
+        {
+            "id": "rulang",
+            "aliases": ["Rulang", "rulang"],
+            "extensions": [".ru"],
+            "configuration": "./language-configuration.json",
+            "icon": {
+                "light": "./images/icon.png",
+                "dark": "./images/icon.png"
+            }
+        }
+        ],
+        "snippets": [
+        {
+            "language": "rulang",
+            "path": "./snippet.json"
+        }
+        ],
+        "grammars": [
+        {
+            "language": "rulang",
+            "scopeName": "source.rulang",
+            "path": "./syntaxes/rulang.tmLanguage.json"
+        }    
+        ]
+    }
+}

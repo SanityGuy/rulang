@@ -5,7 +5,7 @@ import { translate } from "../src/translator.js";
 const file = process.argv[2];
 
 if (!file) {
-  console.log("Использование: rulang <файл.rul>");
+  console.log("Использование: rulang <файл.ru>");
   process.exit(1);
 }
 

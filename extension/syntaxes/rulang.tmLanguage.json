@@ -1,0 +1,116 @@
+{
+    "name": "Rulang",
+    "scopeName": "source.rulang",
+    "patterns": [
+        { "include": "#comments" },
+        { "include": "#strings" },
+        { "include": "#numbers" },
+        { "include": "#keywords" },
+        { "include": "#operators" },
+        { "include": "#support" }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.rulang",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.block.rulang",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.rulang",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [{ "name": "constant.character.escape.rulang", "match": "\\\\." }]
+                },
+                {
+                    "name": "string.quoted.single.rulang",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [{ "name": "constant.character.escape.rulang", "match": "\\\\." }]
+                },
+                {
+                    "name": "string.quoted.template.rulang",
+                    "begin": "`",
+                    "end": "`"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.rulang",
+                    "match": "\\b\\d+(\\.\\d+)?\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.arithmetic.rulang",
+                    "match": "[+\\-*/%^=]"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.rulang",
+                    "match": "\\b(если|иначе|пока|для|прервать|продолжить|вернуть|попытка|поймать|наконец|бросить|выбор|случай|по\\s+умолчанию|асинх|ждать|тогда)\\b"
+                },
+                {
+                    "name": "keyword.operator.logical.rulang",
+                    "match": "\\b(и|или|равно|не\\s+равно|больше\\s+равно|меньше\\s+равно|больше|меньше)\\b"
+                },
+                {
+                    "name": "storage.type.rulang",
+                    "match": "\\b(пусть|конст|функция|класс|конструктор|новый)\\b"
+                },
+                {
+                    "name": "storage.modifier.rulang",
+                    "match": "\\b(наследует)\\b"
+                },
+                {
+                    "name": "constant.language.rulang",
+                    "match": "\\b(истина|ложь|пусто|неизвестно)\\b"
+                }
+            ]
+        },
+        "support": {
+            "patterns": [
+                {
+                    "name": "support.function.console.rulang",
+                    "match": "\\b(вывод)\\b"
+                },
+                {
+                    "name": "support.class.builtin.rulang",
+                    "match": "\\b(целое|дробное|Математика|ДЖЕЙСОН|Обещание)\\b"
+                },
+                {
+                    "name": "support.variable.dom.rulang",
+                    "match": "\\b(документ|окно)\\b"
+                },
+                {
+                    "name": "support.function.dom.rulang",
+                    "match": "\\b(найтиПоИд|найти|найтиВсе|создатьЭлемент|вложить|удалитьЭлемент|клон|установитьАтрибут|получитьАтрибут|добавитьСлушателя|удалитьСлушателя|уведомление|запрос|подтвердить|отложить|интервал|запросить)\\b"
+                },
+                {
+                    "name": "support.function.array.rulang",
+                    "match": "\\b(добавить|карта|каждый|фильтр|сортировать|уменьшить|включает|соединить|разделить|заменить|обрезать|индекс|округлить|пол|потолок|случайный|максимум|минимум|степень|разобрать|вСтроку)\\b"
+                },
+                {
+                    "name": "support.type.property.rulang",
+                    "match": "\\b(содержимоеХТМЛ|текст|значение|стиль|списокКлассов|длина|клик)\\b"
+                }
+            ]
+        }
+    }
+}
