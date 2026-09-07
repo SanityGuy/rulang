@@ -1,0 +1,22 @@
+{
+  "name": "rulang",
+  "version": "1.0.0",
+  "description": "Russian-based programming language translator",
+  "repository": {
+    "type": "git",
+    "url": "rulang"
+  },
+  "license": "MIT",
+  "author": "SouyanDev",
+  "type": "module",
+  "main": "src/translator.js",
+  "bin": {
+    "rulang": "bin/rulang.js"
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
